@@ -1,9 +1,4 @@
-﻿using System.Collections;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Security.Cryptography;
-
-namespace MathGame
+﻿namespace MathGame
 {
     internal class Program
     {

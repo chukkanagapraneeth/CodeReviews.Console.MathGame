@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Security.Cryptography;
 
 namespace MathGame
 {
@@ -117,7 +111,7 @@ namespace MathGame
 
             for(int i = 1; i <= 5; i++)
             {
-                var(numberA, numberB, correctAnswer, question) = GenerateQuestion(op);
+                var (numberA, numberB, correctAnswer, question) = GenerateQuestion(op);
                 Console.WriteLine($"Question {i} : {question}");
                 Console.WriteLine("Your Answer: ");
                 int usrAnswer;
