@@ -1,6 +1,4 @@
-﻿using System.Security.Cryptography;
-
-namespace MathGame
+﻿namespace MathGame
 {
     public class MathGame
     {
@@ -56,8 +54,8 @@ namespace MathGame
 
             do
             {
-                numberA = RandomNumberGenerator.GetInt32(0, 100);
-                numberB = RandomNumberGenerator.GetInt32(0, 100);
+                numberA = System.Security.Cryptography.RandomNumberGenerator.GetInt32(0, 100);
+                numberB = System.Security.Cryptography.RandomNumberGenerator.GetInt32(0, 100);
             } while (operation == Operation.Division && (numberB == 0 || numberA % numberB != 0));
 
             switch (operation)
@@ -111,11 +109,11 @@ namespace MathGame
 
             for(int i = 1; i <= 5; i++)
             {
-                var (numberA, numberB, correctAnswer, question) = GenerateQuestion(op);
+                var (_, _, correctAnswer, question) = GenerateQuestion(op);
                 Console.WriteLine($"Question {i} : {question}");
                 Console.WriteLine("Your Answer: ");
                 int usrAnswer;
-                while(!int.TryParse(Console.ReadLine(), out usrAnswer))
+                while (!int.TryParse(Console.ReadLine(), out usrAnswer))
                 {
                     Console.WriteLine("Invalid Input, please enter an number.");
                 }
